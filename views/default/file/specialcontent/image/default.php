@@ -28,7 +28,8 @@ if ($app && $app != 'none') {
 	return;
 }
 
-$image_url = elgg_format_url($entity->getIconURL('large'));
+// $image_url = elgg_format_url($entity->getIconURL('large'));
+$image_url = elgg_normalize_url($entity->getIconURL('large'));
 $download_url = elgg_get_site_url() . "file/download/{$entity->getGUID()}";
 
 echo <<<HTML
