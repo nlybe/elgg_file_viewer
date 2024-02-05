@@ -1,6 +1,6 @@
 {
 	"name": "hypejunction/elgg_file_viewer",
-	"version": "2.1.0",
+	"version": "5.2.0",
 	"type": "elgg-plugin",
 	"description": "Media viewer for Elgg",
 	"homepage": "http://hypejunction.com",
@@ -21,6 +21,12 @@
 	},
 	"require-dev": {
 		"composer/installers": "~1.0"
+	},
+    "extra": {
+        "installer-name": "elgg_file_viewer"
+    },
+	"conflict": {
+		"elgg/elgg": "<5.0"
 	}
 }
 

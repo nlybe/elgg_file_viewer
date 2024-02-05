@@ -1,6 +1,6 @@
 <?php
 
-$english = array(
+return [
 
 	'efv:settings:mime_remap' => 'Let File Viewer Re-Detect MIME types for MS Office files',
 	'efv:settings:enable_ffmpeg' => 'Enable conversion of video and audio files to web-compatible formats using ffmpeg',
@@ -26,6 +26,4 @@ $english = array(
 	'efv:type:archive' => 'Archive',
 	'efv:type:other' => 'Miscellaneous',
 	
-);
-
-add_translation("en", $english);
+];

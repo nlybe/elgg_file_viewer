@@ -1,12 +1,14 @@
 <?php
 
-$entity = elgg_extract('entity', $vars);
+
+$plugin = elgg_get_plugin_from_id('elgg_file_viewer');
+
 
 echo '<div>';
 echo '<label>' . elgg_echo('efv:settings:enable_ffmpeg') . '</label>';
 echo elgg_view('input/dropdown', [
 	'name' => 'params[enable_ffmpeg]',
-	'value' => $entity->enable_ffmpeg,
+	'value' => $plugin->enable_ffmpeg,
 	'options_values' => [
 		'no' => elgg_echo('option:no'),
 		'yes' => elgg_echo('option:yes')
@@ -18,7 +20,7 @@ echo '<div>';
 echo '<label>' . elgg_echo('efv:settings:ffmpeg_path') . '</label>';
 echo elgg_view('input/text', [
 	'name' => 'params[ffmpeg_path]',
-	'value' => $entity->ffmpeg_path,
+	'value' => $plugin->ffmpeg_path,
 ]);
 echo '</div>';
 
@@ -98,7 +100,7 @@ foreach ($config as $type => $options) {
 		echo "<label>*.$ext</label>";
 		echo elgg_view('input/dropdown', [
 			'name' => "params[$ext]",
-			'value' => $entity->$ext,
+			'value' => $plugin->$ext,
 			'options_values' => $app_options
 		]);
 		echo '</div>';
@@ -106,9 +108,3 @@ foreach ($config as $type => $options) {
 
 	echo '</div>';
 }
-
-
-
-
-
-

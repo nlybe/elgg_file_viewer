@@ -4,7 +4,8 @@
  * On 2017-10-07 16:58
  */
 
-return array (
+ return [
+
   'efv:settings:mime_remap' => 'Permitir que File Viewer vuelva a detectar tipos MIME para archivos de MS Office',
   'efv:settings:enable_ffmpeg' => 'Habilitar la conversión de archivos de vídeo y audio a formatos compatibles con la web mediante ffmpeg',
   'efv:settings:ffmpeg_path' => 'Especifique la ubicación de la biblioteca ffmpeg en su servidor, si falla por defecto',
@@ -24,4 +25,5 @@ return array (
   'efv:type:postscript' => 'Postscript',
   'efv:type:archive' => 'Archivos',
   'efv:type:other' => 'Diverso',
-);
+
+ ];
