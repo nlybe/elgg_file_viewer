@@ -25,7 +25,7 @@ class Bootstrap extends DefaultPluginBootstrap {
 	protected function initViews() {
 
 		// Syntax highlighting
-		elgg_register_css('prism', elgg_get_simplecache_url('prism/themes/prism.css'));
+		// elgg_register_css('prism', elgg_get_simplecache_url('prism/themes/prism.css'));
 		elgg_extend_view('prism/themes/prism.css', 'prism/plugins/line-numbers/prism-line-numbers.css');
 
 		elgg_define_js('prism', [
@@ -37,11 +37,8 @@ class Bootstrap extends DefaultPluginBootstrap {
 			'deps' => ['prism'],
 		]);
 
-		// Videojs
-		elgg_register_css('videojs', elgg_get_simplecache_url('videojs/video-js.min.css'));
-
-		elgg_define_js('videojs', [
-			'src' => elgg_get_simplecache_url('videojs/video.min.js'),
+		elgg_define_js('file_viewer_videojs', [
+			'src' => elgg_get_simplecache_url('file_viewer_videojs/video.min.js'),
 		]);
 
 		elgg_register_page_handler('projekktor', 'elgg_file_viewer_projekktor_video');

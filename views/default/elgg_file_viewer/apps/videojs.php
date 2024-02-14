@@ -5,7 +5,7 @@ if (!$entity instanceof ElggFile) {
 	return;
 }
 
-$attr = array(
+$attr = [
 	'class' => 'video-js',
 	'width' => 640,
 	'id' => "video-player-$entity->guid",
@@ -13,7 +13,7 @@ $attr = array(
 	'controls' => true,
 	'preload' => 'metadata',
 	'autoplay' => false,
-);
+];
 
 $entity_mime = elgg_file_viewer_get_mime_type($entity);
 list($base_type, $ext) = explode('/', $entity_mime);
@@ -60,7 +60,7 @@ foreach ($mimes as $mime) {
 	}
 }
 
-elgg_load_css('videojs');
+elgg_require_css('file_viewer_videojs/video-js.min.css');
 ?>
 <div class="elgg-col elgg-col-1of1 clearfix">
 	<?php

@@ -8,7 +8,8 @@ if (!$entity instanceof ElggFile) {
 $info = pathinfo($entity->getFilenameOnFilestore());
 $extension = $info['extension'];
 
-elgg_load_css('prism');
+// elgg_load_css('prism');
+// elgg_require_css('prism.css');
 elgg_require_js('elgg_file_viewer/apps/syntaxhighlighter');
 
 switch ($extension) {
